@@ -11,6 +11,7 @@ public class Agent : MonoBehaviour {
 
     public static float seperationScale = 2.5f;
     public static float cohesionScale = 0.01f;
+    public static float allignmentScale = 1f;
 
     private BoxCollider2D boundary;
 
@@ -83,8 +84,8 @@ public class Agent : MonoBehaviour {
                 if (distance < sight)
                 {
                     // Alignment
-                    //dX += TODO
-                    //dY += TODO
+                    dX += a.dX * allignmentScale;
+                    dY += a.dY * allignmentScale;
                 }
             }
             if (a.isZombie && distance < sight)
