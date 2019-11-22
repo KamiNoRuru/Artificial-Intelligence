@@ -87,6 +87,7 @@ public class Agent : MonoBehaviour {
             if (a.isZombie && distance < sight)
             {
                 // Evade
+
                 //dX += TODO
                 //dY += TODO
             }
@@ -112,28 +113,8 @@ public class Agent : MonoBehaviour {
         if (prey != null)
         {
             // Move towards prey.
-
-            Vector2 movement = new Vector2(1, 1);
-            movement.Normalize();
-
-            if(prey.position.x > position.x)
-            {
-                movement.x *= 1;
-            }else if(prey.position.x < position.x){
-                movement.x *= -1;
-            }
-
-            if (prey.position.y > position.y)
-            {
-                movement.y *= 1;
-            }
-            else if (prey.position.y < position.y)
-            {
-                movement.y *= -1;
-            }
-
-            dX += movement.x;
-            dY += movement.y;
+            dX -= (position.x - prey.position.x);
+            dY -= (position.y - prey.position.y);
         }
     }
 
