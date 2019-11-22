@@ -114,6 +114,7 @@ public class Agent : MonoBehaviour {
             // Move towards prey.
 
             Vector2 movement = new Vector2(1, 1);
+            movement.Normalize();
 
             if(prey.position.x > position.x)
             {
