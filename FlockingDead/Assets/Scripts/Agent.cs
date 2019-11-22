@@ -10,6 +10,7 @@ public class Agent : MonoBehaviour {
     private static float distToBoundary = 100f;
 
     public static float seperationScale = 2.5f;
+    public static float cohesionScale = 0.01f;
 
     private BoxCollider2D boundary;
 
@@ -76,8 +77,8 @@ public class Agent : MonoBehaviour {
                 else if (distance < sight)
                 {
                     // Cohesion
-                    //dX += TODO
-                    //dY += TODO
+                    dX += (a.position.x - position.x) * cohesionScale;
+                    dY += (a.position.y - position.y) * cohesionScale;
                 }
                 if (distance < sight)
                 {
