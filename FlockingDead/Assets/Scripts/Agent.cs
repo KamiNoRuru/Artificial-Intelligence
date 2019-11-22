@@ -9,6 +9,8 @@ public class Agent : MonoBehaviour {
     private static float rotateSpeed = 3f;
     private static float distToBoundary = 100f;
 
+    public static float seperationScale = 15f;
+
     private BoxCollider2D boundary;
 
     public float dX;
@@ -68,8 +70,8 @@ public class Agent : MonoBehaviour {
                 if (distance < space)
                 {
                     // Separation
-                    dX += (position.x - a.position.x);
-                    dY += (position.y - a.position.y);
+                    dX += (position.x - a.position.x) * seperationScale;
+                    dY += (position.y - a.position.y) * seperationScale;
                 }
                 else if (distance < sight)
                 {
