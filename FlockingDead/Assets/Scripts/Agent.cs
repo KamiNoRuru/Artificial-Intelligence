@@ -88,8 +88,8 @@ public class Agent : MonoBehaviour {
             {
                 // Evade
 
-                //dX += TODO
-                //dY += TODO
+                dX += (position.x - a.position.x);
+                dY += (position.y - a.position.y);
             }
         }
     }
