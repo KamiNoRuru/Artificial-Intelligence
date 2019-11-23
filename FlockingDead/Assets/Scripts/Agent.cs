@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour {
     private static float sight = 100f;
-    private static float space = 50;
+    private static float space = 50f;
     private static float movementSpeed = 75f;
     private static float rotateSpeed = 3f;
     private static float distToBoundary = 100f;
 
     public static float seperationScale = 2.5f;
-    public static float cohesionScale = 0.01f;
-    public static float allignmentScale = 1f;
+    public static float cohesionScale = 0.05f;
+    public static float allignmentScale = 0.01f;
 
     private BoxCollider2D boundary;
 
