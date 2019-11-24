@@ -11,7 +11,7 @@ public class Agent : MonoBehaviour {
 
     public static float seperationScale = 2.5f;
     public static float cohesionScale = 0.05f;
-    public static float allignmentScale = 0.01f;
+    public static float allignmentScale = 10f;
 
     private BoxCollider2D boundary;
 
